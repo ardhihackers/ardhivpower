@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebGIS Kabupaten Purbalingga</title>
+
+  <!-- Leaflet & Plugins CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css" />
+  <link href="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
+  <link rel="stylesheet" href="https://balladaniel.github.io/leaflet-dataclassification/leaflet-dataclassification.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { padding-top: 100px; font-family: 'Segoe UI', sans-serif; }
+    #map { margin-top: 40px; }
+    h1, h2, h3 { color: #00ffd5; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header id="navbar">
+    <div class="container">
+      <div class="logo">
+        <img src="asset/logopur.png" alt="Logo" width="100" />
+        <h1>WebGIS Kabupaten Purbalingga</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#hero-section">Home</a></li>
+          <li><a href="#map-section">Map</a></li>
+          <li><a href="#data-section">Data</a></li>
+          <li><a href="#author-section">Author</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero-section" class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="asset/0604(1).mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay">
+      <div class="hero-text-container">
+        <h1>WebGIS Fasilitas Kesehatan Purbalingga</h1>
+        <p>Eksplorasi Data Fasilitas Kesehatan di Kabupaten Purbalingga secara interaktif</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section id="map-section">
+    <h2>Jelajahi WebGIS Fasilitas Kesehatan</h2>
+    <iframe src="https://fasilitaskesehatankabpurbalingga.netlify.app/" width="1400" height="800" style="border:1px solid #ccc;">
+  </iframe>
+  </section>
+
+  <!-- Data Section -->
+  <section id="data-section">
+    <h2>Data Fasilitas Kesehatan</h2>
+    <div class="container">
+      <div class="column">
+        <div class="data-item">
+          <img src="asset/RSIA_MPH.jpg" alt="RSIA MPH">
+          <div class="description">
+            <h3>RSIA Medika Permata Hijau</h3>
+            <p>Fasilitas kesehatan ibu dan anak di Purbalingga yang menyediakan pelayanan kebidanan, kandungan, anak, laboratorium, farmasi dan ruang rawat.</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="data-item">
+          <img src="asset/RSUD_Goeteng.jpg" alt="RSUD Goeteng">
+          <div class="description">
+            <h3>RSUD dr. R. Goeteng Taroenadibrata</h3>
+            <p>Rumah sakit pemerintah bersejarah yang terus berinovasi dan berkembang untuk meningkatkan kualitas layanan kesehatan masyarakat Purbalingga.</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="data-item">
+          <img src="asset/RSU_Nirmala.JPG" alt="RSU Nirmala">
+          <div class="description">
+            <h3>RSU Nirmala</h3>
+            <p>Rumah sakit swasta tipe C yang berdiri sejak 1995 untuk menyediakan layanan kesehatan terjangkau dan lengkap bagi masyarakat sekitar.</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="data-item">
+          <img src="asset/RSU_Harapan.jpg" alt="RSU Harapan Ibu">
+          <div class="description">
+            <h3>RSU Harapan Ibu</h3>
+            <p>Berlokasi strategis, RS swasta ini telah berkembang dari balai pengobatan menjadi rumah sakit umum terakreditasi sejak 2013.</p>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="data-item">
+          <img src="asset/RSU_Siaga.png" alt="RSU Siaga Medika">
+          <div class="description">
+            <h3>RSU Siaga Medika</h3>
+            <p>RS tipe C dengan akreditasi utama yang menyajikan layanan Islami, profesional dan cepat bagi masyarakat Padamara dan sekitarnya.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Author Section -->
+  <section id="author-section">
+    <div class="author-content">
+      <h2>Tentang Pembuat</h2>
+      <img src="asset/galeri.jpg" alt="Profil" class="profile-picture">
+      <div class="author-name">
+        <h3>Ardhi Rahman Maulana</h3>
+      </div>
+      <p>Spesialis SIG dengan pengalaman lebih dari 7 tahun dalam proyek pemerintah dan swasta, berfokus pada WebGIS, penginderaan jauh, dan mitigasi bencana.</p>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer id="footer">
+    <div class="footer-content">
+      <h3>Kontak</h3>
+      <p>Email: ardhirahman123@upi.edu</p>
+      <p>Telepon: 087827953371</p>
+    </div>
+  </footer>
+
+  <!-- JS Plugins & Main Script -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2.4.0/src/easy-button.js"></script>
+  <script src="https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js"></script>
+  <script src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+  <script src="https://balladaniel.github.io/leaflet-dataclassification/leaflet-dataclassification.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
